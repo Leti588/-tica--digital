@@ -1,0 +1,300 @@
+/* Variáveis de Cores e Estilo */
+:root {
+    --bg-principal: #0b0f19;
+    --bg-card: #141d30;
+    --texto: #f1f5f9;
+    --texto-secundario: #94a3b8;
+    --neon-azul: #00f0ff;
+    --neon-roxo: #bd00ff;
+    --neon-verde: #39ff14;
+    --borda: #1e293b;
+    --fonte-tamanho-base: 16px;
+}
+
+/* Tema Claro */
+body.light-theme {
+    --bg-principal: #f8fafc;
+    --bg-card: #ffffff;
+    --texto: #0f172a;
+    --texto-secundario: #475569;
+    --borda: #cbd5e1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body {
+    background-color: var(--bg-principal);
+    color: var(--texto);
+    font-size: var(--fonte-tamanho-base);
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Decorativo */
+header {
+    position: relative;
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%);
+    border-bottom: 2px solid var(--neon-azul);
+    overflow: hidden;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #fff;
+    text-shadow: 0 0 10px var(--neon-azul), 0 0 20px var(--neon-roxo);
+    margin-bottom: 10px;
+}
+
+header p {
+    color: var(--neon-azul);
+    font-weight: 500;
+}
+
+/* Cards Decorados */
+.card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--borda);
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    position: relative;
+}
+
+.card h2 {
+    color: var(--neon-azul);
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--borda);
+    padding-bottom: 10px;
+}
+
+/* Seção de Introdução */
+.intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+}
+
+.image-placeholder img {
+    width: 100%;
+    border-radius: 8px;
+    border: 2px solid var(--neon-roxo);
+    box-shadow: 0 0 15px rgba(189, 0, 255, 0.3);
+}
+
+/* Linha do Tempo (Timeline) */
+.timeline {
+    position: relative;
+    border-left: 3px solid var(--neon-azul);
+    margin-left: 20px;
+    padding-left: 20px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -33px;
+    top: 5px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--bg-principal);
+    border: 4px solid var(--neon-roxo);
+    box-shadow: 0 0 8px var(--neon-roxo);
+}
+
+.timeline-date {
+    font-weight: bold;
+    color: var(--neon-azul);
+}
+
+.timeline-content {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 15px;
+    border-radius: 6px;
+    border: 1px solid var(--borda);
+}
+
+/* Elementos Interativos (Inputs, Botões, Opções) */
+.form-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 12px;
+    border-radius: 6px;
+    border: 2px solid var(--borda);
+    background-color: var(--bg-principal);
+    color: var(--texto);
+    font-size: 1rem;
+}
+
+input[type="text"]:focus {
+    border-color: var(--neon-azul);
+    outline: none;
+}
+
+.btn {
+    padding: 12px 24px;
+    background: linear-gradient(90deg, var(--neon-azul), var(--neon-roxo));
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 240, 255, 0.4);
+}
+
+.btn:hover {
+    filter: brightness(1.2);
+}
+
+.options-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.option-btn {
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--borda);
+    border-radius: 8px;
+    color: var(--texto);
+    text-align: left;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.option-btn:hover {
+    border-color: var(--neon-azul);
+    background: rgba(0, 240, 255, 0.1);
+}
+
+/* Progress Bar */
+.progress-bar {
+    width: 100%;
+    height: 6px;
+    background: var(--borda);
+    border-radius: 3px;
+    margin-bottom: 20px;
+}
+
+.progress {
+    height: 100%;
+    width: 0%;
+    background: var(--neon-azul);
+    border-radius: 3px;
+    transition: width 0.3s;
+}
+
+/* Rankings */
+.ranking-box {
+    margin-top: 20px;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid var(--neon-roxo);
+}
+
+.ranking-box ol {
+    padding-left: 20px;
+}
+
+.ranking-box li {
+    margin: 8px 0;
+    padding: 4px;
+    border-bottom: 1px dashed var(--borda);
+}
+
+/* Menu de Acessibilidade Flutuante */
+.accessibility-menu {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.acc-toggle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--neon-azul);
+    color: #000;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.acc-options {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 60px;
+    background-color: var(--bg-card);
+    border: 1px solid var(--borda);
+    border-radius: 8px;
+    padding: 10px;
+    width: 200px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+.acc-options button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    background: transparent;
+    color: var(--texto);
+    border: 1px solid transparent;
+    text-align: left;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.acc-options button:hover {
+    background: rgba(0, 240, 255, 0.1);
+    border-color: var(--neon-azul);
+}
+
+/* Classes Utilitárias */
+.hidden { display: none !important; }
+
+/* Responsividade total (Celulares e Tablets) */
+@media (max-width: 768px) {
+    .intro-grid {
+        grid-template-columns: 1fr;
+    }
+    header h1 {
+        font-size: 2rem;
+    }
+    .form-group {
+        flex-direction: column;
+    }
+}
